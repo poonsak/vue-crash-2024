@@ -1,26 +1,14 @@
-<script>
+<script setup>
 import { ref } from 'vue';
 
-export default {
-  setup() {
-    const name = ref('John Doe');
-    const status = ref(false);
-    const tasks = ref(['Task one', 'Task two', 'Task three']);
-    const link = ref('https://google.com');
+const name = ref('John Doe');
+const status = ref(false);
+const tasks = ref(['Task one', 'Task two', 'Task three']);
+const link = ref('https://google.com');
+const toggleStatus = () => {
+  status.value = !status.value
+};
 
-    const toggleStatus = () => {
-      status.value = !status.value
-    };
-
-    return {
-      name,
-      status,
-      tasks,
-      link,
-      toggleStatus,
-    }
-  }
-}
 </script>
 
 <template>
