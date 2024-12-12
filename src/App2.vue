@@ -1,23 +1,16 @@
 <script>
-import { ref } from 'vue';
-
 export default {
-  setup() {
-    const name = ref('John Doe');
-    const status = ref(false);
-    const tasks = ref(['Task one', 'Task two', 'Task three']);
-    const link = ref('https://google.com');
-
-    const toggleStatus = () => {
-      status.value = !status.value
-    };
-
+  data() {
     return {
-      name,
-      status,
-      tasks,
-      link,
-      toggleStatus,
+      name: 'John Doe',
+      status: false,
+      tasks: ['Task one', 'Task two', 'Task three'],
+      link: 'https://google.com'
+    }
+  },
+  methods: {
+    toggleStatus() {
+      this.status = !this.status
     }
   }
 }
